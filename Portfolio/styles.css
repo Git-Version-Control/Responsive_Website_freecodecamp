@@ -1,8 +1,9 @@
 :root {
-  --portfolio-red: red;
+  --portfolio-nav: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(206,4,214,1) 0%, rgba(197,0,255,1) 41%, rgba(255,0,243,1) 91%);
   --portfolio-white: white;
-  --portfolio-blue: #45567d;
-  --portfolio-gray: rgb(32, 37, 47);
+  --portfolio-welcome: linear-gradient(202deg, rgba(255,255,255,1) 19%, rgba(208,201,207,1) 78%);
+  --portfolio-blue: rgb(106, 90, 205);
+  --portfolio-purple: rgb(238, 130, 238);
 }
 * {
   box-sizing: border-box;
@@ -24,7 +25,8 @@ a {
   text-decoration: none;
 }
 #navbar {
-  background-color: var(--portfolio-red);
+  /* background: rgb(2,0,36); */
+  background: var(--portfolio-nav);
   height: 70px;
   width: 100%;
   display: flex;
@@ -61,18 +63,21 @@ nav a:hover {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background:var(--portfolio-welcome);
 }
 #welcome-section h1 {
   font-size: 50px;
+  color: black;
 }
 #welcome-section p {
   font-style: italic;
-  color: var(--portfolio-red);
+  color: black;
   margin: 3px;
   font-size: 30px;
 }
-
+#welcome-section h1:hover{
+  color:red;
+}
 #projects {
   background-color: var(--portfolio-blue);
   text-align: center;
@@ -110,7 +115,8 @@ nav a:hover {
 .project {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
-  background-color: var(--portfolio-gray);
+  background-color:  #ccddff;
+  border-style: outset;
 }
 
 .project-image {
@@ -119,12 +125,15 @@ nav a:hover {
   width: 100%;
   object-fit: cover;
 }
+.project-title{
+  color:#000;
+}
 p {
   color: var(--portfolio-white);
 }
 
 .code {
-  color: var(--portfolio-gray);
+  color: var(--portfolio-purple);
   transition: color 0.3s ease-out;
 }
 
@@ -175,7 +184,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--portfolio-gray);
+  background: var(--portfolio-nav);
   border-top: 4px solid var(--portfolio-red);
 }
 
